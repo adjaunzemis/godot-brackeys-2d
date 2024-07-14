@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b4ssserykuvpt"]
+[gd_scene load_steps=14 format=3 uid="uid://b4ssserykuvpt"]
 
 [ext_resource type="PackedScene" uid="uid://dpgx2n2ucxww" path="res://scenes/player.tscn" id="1_2j2po"]
 [ext_resource type="Texture2D" uid="uid://h5dwv4mp04eo" path="res://assets/sprites/world_tileset.png" id="1_aeosi"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c34s0kow12lwd" path="res://scenes/coin.tscn" id="4_2jub5"]
 [ext_resource type="PackedScene" uid="uid://c4m0qrjyv58au" path="res://scenes/killzone.tscn" id="5_8mh4w"]
 [ext_resource type="PackedScene" uid="uid://r4po765duj1o" path="res://scenes/slime.tscn" id="6_vnglo"]
+[ext_resource type="FontFile" uid="uid://bcg51sg2e1pww" path="res://assets/fonts/PixelOperator8.ttf" id="7_lcmma"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cm6w3"]
 texture = ExtResource("1_aeosi")
@@ -524,3 +525,35 @@ autoplay = "move"
 
 [node name="Slime" parent="." instance=ExtResource("6_vnglo")]
 position = Vector2(480, 48)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -141.0
+offset_top = 46.0
+offset_right = -50.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_lcmma")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump."
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 329.0
+offset_top = 46.0
+offset_right = 420.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_lcmma")
+theme_override_font_sizes/font_size = 8
+text = "Falling hurts."
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 655.0
+offset_top = -82.0
+offset_right = 749.0
+offset_bottom = -71.0
+theme_override_colors/font_color = Color(0.0980392, 0.313726, 0.752941, 1)
+theme_override_fonts/font = ExtResource("7_lcmma")
+theme_override_font_sizes/font_size = 8
+text = "Almost there..."
